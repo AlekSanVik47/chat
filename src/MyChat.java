@@ -1,13 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 public class MyChat extends JFrame {
-    private List<String> chatParticipants;
-    private JTextArea messageOutput;
-    private JTextField messageInput;
-    private JTextField contacts;
+
+    private final JTextArea messageOutput;
+    private final JTextField messageInput;
+    private final JTextField contacts;
+
 
     public MyChat() {
         setBounds(500, 500, 700, 600);
@@ -33,10 +33,6 @@ public class MyChat extends JFrame {
 
         bottomPanel.add(messageInput, BorderLayout.CENTER);
 
-        // JPanel jPanel = new JPanel(new BorderLayout());
-        // add(jPanel, BorderLayout.WEST);
-        // JComboBox jComboBox = new JComboBox(( ComboBoxModel ) chatParticipants);
-        // jComboBox.add(( Component ) chatParticipants);
 
         sendMessage.addActionListener(new ActionListener() {
             @Override
@@ -66,4 +62,5 @@ public class MyChat extends JFrame {
     public static void main(String[] args) {
         new MyChat();
     }
+
 }
